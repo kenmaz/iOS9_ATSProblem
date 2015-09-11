@@ -7,21 +7,30 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "AFNetworking.h"
+#import "AFURLResponseSerialization.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+- (IBAction)buttonDidTouch:(UIButton*)button {
+    NSString* url = [button titleForState:UIControlStateNormal];
+    [self _requestWithURL:url];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)_requestWithURL:(NSString*)url {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer new];
+    
+    [manager
+     GET:url
+     parameters:nil
+     success:^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSLog(@"success: %@", responseObject);
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"failure: %@", error);
+     }];
 }
 
 @end

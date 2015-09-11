@@ -14,6 +14,7 @@
 		5EB978281BA2DC1C005F70C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB978271BA2DC1C005F70C7 /* Images.xcassets */; };
 		5EB9782B1BA2DC1C005F70C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB978291BA2DC1C005F70C7 /* LaunchScreen.xib */; };
 		5EB978371BA2DC1C005F70C7 /* SimpleAFSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB978361BA2DC1C005F70C7 /* SimpleAFSampleTests.m */; };
+		A29DD2358D345B7589CA712B /* libPods-SimpleAFSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1138742D3E19B1701AF01AF /* libPods-SimpleAFSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D32A562F8649C230DF0EF9A /* Pods-SimpleAFSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAFSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleAFSample/Pods-SimpleAFSample.release.xcconfig"; sourceTree = "<group>"; };
 		5EB978171BA2DC1C005F70C7 /* SimpleAFSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAFSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB9781B1BA2DC1C005F70C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EB9781C1BA2DC1C005F70C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		5EB978301BA2DC1C005F70C7 /* SimpleAFSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAFSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB978351BA2DC1C005F70C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EB978361BA2DC1C005F70C7 /* SimpleAFSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAFSampleTests.m; sourceTree = "<group>"; };
+		87DACB4925C5AE99EEEB3951 /* Pods-SimpleAFSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAFSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleAFSample/Pods-SimpleAFSample.debug.xcconfig"; sourceTree = "<group>"; };
+		C1138742D3E19B1701AF01AF /* libPods-SimpleAFSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleAFSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29DD2358D345B7589CA712B /* libPods-SimpleAFSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0226C544CB2623A93D3035B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1138742D3E19B1701AF01AF /* libPods-SimpleAFSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EB9780E1BA2DC1C005F70C7 = {
 			isa = PBXGroup;
 			children = (
 				5EB978191BA2DC1C005F70C7 /* SimpleAFSample */,
 				5EB978331BA2DC1C005F70C7 /* SimpleAFSampleTests */,
 				5EB978181BA2DC1C005F70C7 /* Products */,
+				FCE293C7CDD3BE95C938D4FC /* Pods */,
+				0226C544CB2623A93D3035B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FCE293C7CDD3BE95C938D4FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87DACB4925C5AE99EEEB3951 /* Pods-SimpleAFSample.debug.xcconfig */,
+				3D32A562F8649C230DF0EF9A /* Pods-SimpleAFSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB9783A1BA2DC1C005F70C7 /* Build configuration list for PBXNativeTarget "SimpleAFSample" */;
 			buildPhases = (
+				68DBB0D5A6D81E61BAE4B476 /* Check Pods Manifest.lock */,
 				5EB978131BA2DC1C005F70C7 /* Sources */,
 				5EB978141BA2DC1C005F70C7 /* Frameworks */,
 				5EB978151BA2DC1C005F70C7 /* Resources */,
+				C0F009488CA11DFBE14940B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68DBB0D5A6D81E61BAE4B476 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F009488CA11DFBE14940B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleAFSample/Pods-SimpleAFSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EB978131BA2DC1C005F70C7 /* Sources */ = {
@@ -347,8 +406,10 @@
 		};
 		5EB9783B1BA2DC1C005F70C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87DACB4925C5AE99EEEB3951 /* Pods-SimpleAFSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleAFSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,11 +418,14 @@
 		};
 		5EB9783C1BA2DC1C005F70C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D32A562F8649C230DF0EF9A /* Pods-SimpleAFSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = SimpleAFSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +482,7 @@
 				5EB9783C1BA2DC1C005F70C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EB9783D1BA2DC1C005F70C7 /* Build configuration list for PBXNativeTarget "SimpleAFSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +491,7 @@
 				5EB9783F1BA2DC1C005F70C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
